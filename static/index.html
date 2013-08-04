@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatter</title>
+    <script src='socket.io/socket.io.js'></script>
+    <script src='js/jquery-2.0.3.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='coffee/chatter.js'></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <h3>Message History</h3>
+        <div id="message-history"></div>
+        <form id='chat-form'>
+            <input id='chat-input' type="text">
+            <input class="btn btn-success" type="submit" value="Post">
+        </form>
+    </div>
+</body>
+</html>
