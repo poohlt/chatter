@@ -17,6 +17,11 @@ var pushMessage = function(name, data){
     messages.push({name: name, data: data});
 };
 
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
+
 io.sockets.on('connection', function(client){
     console.log("client conneted..");
 
