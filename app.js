@@ -25,7 +25,10 @@ io.configure(function () {
 io.sockets.on('connection', function(client){
     console.log("client conneted..");
 
+
     client.on('join', function(name){
+        if (!name) {name = "Anonymous";}
+
         client.set('nickname', name);
         messages.forEach(function(message){
             client.emit('messages', message.name +': '+ message.data);
