@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var server = io.connect('http://localhost:8080');
+    var server = io.connect(document.URL);
     var insertMessage = function(message){
         $("#message-history").append(message);
     };
