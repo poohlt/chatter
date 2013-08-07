@@ -28,8 +28,9 @@ io.sockets.on('connection', function(client){
 
     client.on('join', function(name){
         if (!name) {name = "Anonymous";}
-
         client.set('nickname', name);
+        client.broadcast.emit('messages', name +' just joined the chat room!');
+
         messages.forEach(function(message){
             client.emit('messages', message.name +': '+ message.data);
         });
