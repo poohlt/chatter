@@ -4,6 +4,7 @@ var http = require('http');
 var app = express();
 
 app.use(express.static(__dirname + '/static'));
+app.use(express.favicon(__dirname + '/static/img/favicon.ico'));
 
 // app.get('/',function(req,res){
 //     res.render('index.html');
